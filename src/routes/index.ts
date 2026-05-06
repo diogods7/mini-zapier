@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import { createAutomation } from '../controllers/automationController'
-import { getJob } from '../controllers/jobController'
+import { createAutomation } from '../controllers/automationController.js'
+import { getJob } from '../controllers/jobController.js'
 
 const router = Router()
 
