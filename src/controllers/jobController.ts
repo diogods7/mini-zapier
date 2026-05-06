@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 import { automationQueue } from '../config/redis.js'
 
 export async function getJob(req: Request, res: Response) {
-  const job = await automationQueue.getJob(req.params.id)
+  const job = await automationQueue.getJob(String(req.params.id))
 
   if (!job) return res.status(404).json({ error: 'Not found' })
 
